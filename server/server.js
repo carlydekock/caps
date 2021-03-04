@@ -8,8 +8,7 @@ const io = socketio(3000);
 //namespaces
 const caps = io.of('/caps');
 
-
-//order queue
+// order queue
 const orderQueue = {
   pickup: {},
   intransit: {},
