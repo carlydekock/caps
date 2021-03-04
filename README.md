@@ -31,7 +31,7 @@
 
 ## UML
 
-![image](assets/UML-12.png)
+![image](assets/UML-Lab12.png)
 
 ## Credits and Collaborations
 
