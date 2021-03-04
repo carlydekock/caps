@@ -1,7 +1,7 @@
 'use strict';
 
 const driver = require('../driver/client.js');
-const vendor = require('../vendor/client.js');
+const vendor = require('../vendor-flowers/client.js');
 
 console.log = jest.fn();
 

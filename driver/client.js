@@ -6,10 +6,11 @@ const capsURL = 'http://localhost:3000/caps';
 
 const capsServer = io.connect(capsURL);
 
+capsServer.emit('getAll');
 
 capsServer.on('pickup', (payload) => {
   setTimeout(() => {
-    console.log(`pickup ${payload.order.orderId}`);
+    console.log(`DRIVER: pickup ${payload.order.orderId}`);
 
     payload.event = 'in-transit';
     payload.time = new Date().toISOString();
@@ -17,11 +18,11 @@ capsServer.on('pickup', (payload) => {
   }, 1500);
 
   setTimeout(() => {
-    console.log(`delivered ${payload.order.orderId}`);
+    console.log(`DRIVER: delivered ${payload.order.orderId}`);
 
     payload.event = 'delivered';
     payload.time = new Date().toISOString();
     capsServer.emit('delivered', payload);
-  }, 1500);
+  }, 3000);
 });
 
