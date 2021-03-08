@@ -10,6 +10,7 @@ capsServer.emit('getAll');
 
 capsServer.on('pickup', (payload) => {
   setTimeout(() => {
+    capsServer.emit('received', payload);
     console.log(`DRIVER: pickup ${payload.order.orderId}`);
 
     payload.event = 'in-transit';
@@ -18,6 +19,7 @@ capsServer.on('pickup', (payload) => {
   }, 1500);
 
   setTimeout(() => {
+    capsServer.emit('received', payload);
     console.log(`DRIVER: delivered ${payload.order.orderId}`);
 
     payload.event = 'delivered';
