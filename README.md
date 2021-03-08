@@ -9,7 +9,7 @@
 ## Author: Carly Dekock
 
 ## [Link to GitHub repository](https://github.com/carlydekock/caps.git)
-## [Link to PR](https://github.com/carlydekock/caps/pull/3)
+## [Link to PR](https://github.com/carlydekock/caps/pull/4)
 
 ## Deployed links
 
